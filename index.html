@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acordeón JQuery</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css">
+    <script src="https://kit.fontawesome.com/66f5e943e2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="fancybox/jquery.fancybox.js"></script> 
+    <script src="responsiveslides.min.js"></script>
+</head>
+<body>
+    <h1>Acordeon con JavaScript</h1>
+
+    <div class="acordeon ancho">
+        <div class="acordeon_titulo">
+            <h2>Opción 1</h2> 
+            <i id="flecha" class="fas fa-arrow-down fa-2x"></i>
+        </div>
+
+        <article class="acordeon_contenido">            
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quas adipisci dolorum laborum, 
+                iure quam corrupti ipsum! Quod eum blanditiis nam voluptatum vitae aperiam iste et. Non atque ipsa 
+                dolorem.
+            </p>
+        </article>
+    </div>
+
+    <div class="acordeon ancho">
+        <div class="acordeon_titulo">
+            <h2>Opción 2</h2>
+            <i class="fas fa-sort-down fa-2x"></i>
+        </div>
+
+        <article class="acordeon_contenido">            
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quas adipisci dolorum laborum, 
+                iure quam corrupti ipsum! Quod eum blanditiis nam voluptatum vitae aperiam iste et. Non atque ipsa 
+                dolorem.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quas adipisci dolorum laborum, 
+                iure quam corrupti ipsum! Quod eum blanditiis nam voluptatum vitae aperiam iste et. Non atque ipsa 
+                dolorem.
+            </p>
+        </article>
+    </div>
+
+    <div class="acordeon ancho">
+        <div class="acordeon_titulo">
+            <h2>Opción 3</h2>
+            <i class="far fa-plus-square fa-2x"></i>
+        </div>
+
+        <article class="acordeon_contenido">            
+            <ul class="lista">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JAVASCRIPT</li>
+            </ul>
+        </article>
+    </div>
+
+    <script>
+        // $(".acordeon_titulo").click(function(){
+        //     $(".acordeon_contenido").slideToggle();
+        // });
+
+        $(".acordeon_titulo").click(function (){
+            var t = $(this);
+            var tp = t.next();
+            tp.slideToggle();
+            $("#flecha").toggleClass("rotarflecha");
+        });
+    </script>
+</body>
+</html>

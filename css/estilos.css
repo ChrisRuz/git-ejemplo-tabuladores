@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+}
+
+.ancho{
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1{
+    padding: 15px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.lista{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.acordeon_titulo{
+    border: 2px #ccc solid;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #f0f0f0;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acordeon_contenido{
+    background-color: #d3edf7;
+    padding: 15px;
+    display: none;
+}
+
+.rotarflecha{
+    transition: all .3s;
+    transform: rotate(180deg);
+}
